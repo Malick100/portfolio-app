@@ -6,11 +6,11 @@ jobs:
   build: 
     runs-on: ubuntu-latest
     steps: 
-      - name: chekout code3
+      - name: chekout code
         uses: actions/checkout@v4
       - name: Build image
-        run : docker build -t Malick100/ciportfolio .
+        run : docker build -t ${{ secrets.DOCKER_USERNAME }}/ciportfolio .
       - name: List images
         run: docker images
-      
-             
+
+
